@@ -1,0 +1,83 @@
+
+.attribution { font-size: 0.6875rem; text-align: center; 
+    margin-top: 90px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    margin: 90px;
+    margin-bottom: 0px; /*se coloca a fin de evitar
+    choque con el margen top de la clase attribution,
+    aparecia un scroll*/
+    background-color: hsl(212, 45%, 89%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /*alinea los elementos hermanos
+    uno encima de otro, no al lado como estaba pasando
+    con las etiquetas section y footer*/
+}
+
+ #contenedor {
+    background-color: white;
+    height: 350px;
+    width: 220px;
+    border-radius: 12px;
+    /*margin-top: 100px; 
+    margin-left: 525px;*/ /*No son necesarios si al contenedor
+    padre, en este caso body, se le coloca las propiedades
+    flex alineadas en center*/
+}  /*Originalmente se puso el valor de la propiedad 
+    width a mas de 300 pero daba problemas porque
+    el contenedor quedaba mas ancho del requerido para
+    los margenes interiores*/
+
+.width { 
+    width: 200px;
+    margin-left: 10px;
+} /*los elementos con la clase width(img, h3 y p) comparten
+estas propiedades*/
+
+img {
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: hsl(218, 44%, 22%);
+    margin-top: 20px;
+}
+
+p {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: hsl(216, 15%, 48%);
+}
+
+@media (max-width: 320px) {
+  /* se agrego media querry para modificar los Estilos
+   para celulares con pantallas de hasta 320px*/
+
+  body {
+    margin:0px;
+    margin-top:20px;
+  }
+
+   #contenedor {
+    width: 210px;
+  }
+
+  .width { 
+    width: 190px;
+  } 
+
+p {
+    margin-bottom:10 px;
+}
+.attribution {
+    margin-top:30px;
+}
+}
